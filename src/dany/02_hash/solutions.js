@@ -5,7 +5,7 @@ const getBigger2PlayCnt = (playCnts) => {
   return [playCnts[0], playCnts[1]]
 }
 
-// 시간복잡도 : O(6n + n log n) => O(n log n)
+// 시간복잡도 : O(6n + n log n + n + n) => O(n log n)
 export const bestAlbum = (genres, plays) => {
   const playPerGenre = {}
   for (let i = 0; i < genres.length; i++) {
