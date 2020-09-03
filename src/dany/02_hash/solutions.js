@@ -31,7 +31,6 @@ export const bestAlbum = (genres, plays) => {
   })
   
   let answer = []
-
   for (const result of results) {
     answer = answer.concat(result.playCnts.map((playCnt) => playCnt.id))
   }
