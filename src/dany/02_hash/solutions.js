@@ -5,6 +5,7 @@ const getBigger2PlayCnt = (playCnts) => {
   return [playCnts[0], playCnts[1]]
 }
 
+// 시간복잡도 : O(6n + n log n) => O(n log n)
 export const bestAlbum = (genres, plays) => {
   const playPerGenre = {}
   for (let i = 0; i < genres.length; i++) {
@@ -31,7 +32,6 @@ export const bestAlbum = (genres, plays) => {
   })
   
   let answer = []
-  
   
   for (const result of results) {
     answer = answer.concat(result.playCnts.map((playCnt) => playCnt.id))
