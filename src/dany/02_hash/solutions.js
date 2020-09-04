@@ -40,7 +40,7 @@ export const bestAlbum = (genres, plays) => {
   return answer
 }
 
-const getCombinations = function (arr, selectNumber) {
+const getCombinations = (arr, selectNumber) => {
   const results = []
   
   // 1개씩 택할 때, 바로 모든 배열의 원소 return
