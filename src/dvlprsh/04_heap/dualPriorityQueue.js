@@ -6,11 +6,11 @@ function solution(operations) {
       switch(operation) {
           case 'I':
               queue.push(data);
+              queue.sort((a, b) => a - b);
               break;
           case 'D':
               data === 1 ? queue.pop() : queue.shift();
       }
-      queue.sort((a, b) => a - b);
   });
   return queue.length === 0 ? [0, 0] : [queue.pop(), queue.shift()];
 }
