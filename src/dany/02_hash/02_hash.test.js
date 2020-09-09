@@ -7,6 +7,10 @@ describe('02_solution_test', () => {
   })
 
   it('위장', () => {
-    expect(camouflage([["y_h", 'head'], ['y_a', 'body']])).toEqual(3)
+    expect(camouflage([
+      ["yellow_hat", "headgear"],
+      ["blue_sunglasses", "eyewear"],
+      ["green_turban", "headgear"],
+    ])).toEqual(5)
   })
 })
