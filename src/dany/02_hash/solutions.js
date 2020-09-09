@@ -46,9 +46,6 @@ const getCombinations = (arr, selectNumber) => {
 }
 
 export const camouflage = (clothes) => {
-  if (clothes.length === 0) {
-    return 0
-  }
   const hash = {}
   for (const [ name, type ] of clothes) {
     if (hash[type]) {
