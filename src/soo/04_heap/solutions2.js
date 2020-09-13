@@ -12,7 +12,7 @@ class Heap {
     this.shiftUp(this.heap.length - 1, this.heap);
   }
 
-  remove() {
+  remove(value) {
     this.swap(0, this.heap.length - 1, this.heap);
     const valueToRemove = this.heap.pop();
     this.shiftDown(0, this.heap.length - 1, this.heap);
@@ -99,6 +99,7 @@ function solution(operations) {
   const minPrioirityQueue = new MinHeap();
   const maxPrioirityQueue = new MaxHeap();
 
+
   for (const operation of operations) {
     const [command, value] = operation.split(' ');
     if (command === 'I') {
@@ -115,6 +116,7 @@ function solution(operations) {
 
     }
   }
+
 
   if (maxPrioirityQueue.getHeap.length && minPrioirityQueue.getHeap.length) {
     return [maxPrioirityQueue.remove(), minPrioirityQueue.remove()]
